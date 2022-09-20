@@ -29,7 +29,13 @@ console.log(deleteFromEmployeeByKey(employees, "Rob"))
 
 
 
-function destructivelyUpdateEmployeeByKey(employees, key){
-    delete employees.key;
-    return employees;
+function destructivelyUpdateEmployeeByKey(employees, key, newVal){
+    console.log(employees)
+    const oldKey = employees[key]
+    console.log(oldKey)
+    employees[key] = newVal
+    console.log(employees)
+    return employees[key];
 }
+
+console.log(destructivelyUpdateEmployeeByKey(employees, "John", "new Address"))
